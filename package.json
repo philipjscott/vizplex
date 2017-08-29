@@ -1,0 +1,14 @@
+{
+  "name": "webpack-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "webpack": "webpack",
+    "dev": "webpack-dev-server --open"
+  },
+  "dependencies": {
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
