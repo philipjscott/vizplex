@@ -1,14 +1,28 @@
 {
-  "name": "webpack-boilerplate",
+  "name": "Vizplex",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "./srcindex.js",
   "license": "MIT",
   "scripts": {
     "webpack": "webpack",
     "dev": "webpack-dev-server --open"
   },
   "dependencies": {
+    "a-big-triangle": "^1.0.3",
+    "canvas-fit": "^1.5.0",
+    "gl-clear": "^2.0.0",
+    "gl-context": "^0.1.1",
+    "gl-shader": "^4.2.1",
+    "glsl-noise": "^0.0.0",
+    "glslify": "^6.1.0",
+    "right-now": "^1.0.0"
+  },
+  "devDependencies": {
+    "glslify-loader": "^1.0.2",
+    "raw-loader": "^0.5.1",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
-  }
+  },
+  "repository": "https://github.com/ScottyFillups/vizplex.git",
+  "author": "Philip Scott <pscott@zeptohost.com>"
 }
