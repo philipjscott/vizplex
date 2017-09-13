@@ -1,11 +1,12 @@
 {
-  "name": "Vizplex",
+  "name": "vizplex",
   "version": "1.0.0",
-  "main": "./srcindex.js",
+  "main": "./src/index.js",
   "license": "MIT",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack-dev-server --open"
+    "dev": "webpack-dev-server --open",
+    "test": "mocha --require reify test"
   },
   "dependencies": {
     "a-big-triangle": "^1.0.3",
@@ -15,10 +16,15 @@
     "gl-shader": "^4.2.1",
     "glsl-noise": "^0.0.0",
     "glslify": "^6.1.0",
-    "right-now": "^1.0.0"
+    "reify": "^0.12.1",
+    "right-now": "^1.0.0",
+    "xregexp": "^3.2.0"
   },
   "devDependencies": {
+    "buble": "^0.15.2",
+    "buble-loader": "^0.4.1",
     "glslify-loader": "^1.0.2",
+    "mocha": "^3.5.3",
     "raw-loader": "^0.5.1",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"

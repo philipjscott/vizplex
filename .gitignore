@@ -1,3 +1,5 @@
 /node_modules
+ideas.txt
 *.swo
 *.swp
+.reify-cache
