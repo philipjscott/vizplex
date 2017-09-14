@@ -3,7 +3,8 @@ var path = require('path')
 module.exports = {
   entry: {
     bundle: './docs/demo.js',
-    vizplex: './src/index.js'
+    vizplex: './src/index.js',
+    test: './test/test.js'
   },
   output: {
     filename: '[name].js',
@@ -32,6 +33,11 @@ module.exports = {
         query: {
           objectAssign: 'Object.assign'
         }
+      },
+      {
+        test: /test\.js$/,
+        use: 'mocha-loader',
+        exclude: /node_modules/
       }
     ]
   }
