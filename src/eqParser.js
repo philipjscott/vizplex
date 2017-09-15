@@ -1,5 +1,5 @@
 export default function eqParser (eq) {
-  var regex = /[^i]*?n\(/g
+  var regex = /([^i]?)n\(/g
   var matches = []
   var match
   
@@ -21,6 +21,6 @@ export default function eqParser (eq) {
       }
     }
   })
-  
-  return eq.replace(regex, '%NOISE%(vec3(')
+  console.log(eq) 
+  return eq.replace(regex, '$1%NOISE%(vec3(')
 }
