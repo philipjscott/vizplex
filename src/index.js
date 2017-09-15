@@ -13,7 +13,8 @@ const clear = glClear({ color: [0, 1, 0, 1] })
 const fragLookup = {
   "%R_FN%": 0,
   "%G_FN%": 1,
-  "%B_FN%": 2
+  "%B_FN%": 2,
+  "%A_FN%": 3
 }
 let gl
 let shader
@@ -43,7 +44,7 @@ function render () {
   }
 }
 
-export default function vizplex (target, rgb, options) {
+export default function vizplex (target, rgba, options) {
   options = options || {}
   capturer = options.ccapConfig ? new CCapture(options.ccapConfig) : null
   tFactor = options.timeFactor || 1
@@ -57,8 +58,8 @@ export default function vizplex (target, rgb, options) {
   }
 
   gl = glContext(canvas, render)
-  rgb = rgb.map(fnStr => eqParser(fnStr))
-  frag = rawFrag.replace(/(%R_FN%|%G_FN%|%B_FN%)/g, substr => rgb[fragLookup[substr]])
+  rgba = rgba.map(fnStr => eqParser(fnStr))
+  frag = rawFrag.replace(/(%R_FN%|%G_FN%|%B_FN%|%A_FN%)/g, substr => rgba[fragLookup[substr]])
                 .replace(/%NOISE%/g, 'snoise_1_3')
   shader = glShader(gl, vert, frag)
 }

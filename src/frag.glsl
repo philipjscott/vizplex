@@ -8,5 +8,6 @@ void main() {
   float r = %R_FN%;
   float g = %G_FN%;
   float b = %B_FN%;
-  gl_FragColor = vec4(r, g, b, 1.0);
+  float a = %A_FN%;
+  gl_FragColor = vec4(r, g, b, a);
 }

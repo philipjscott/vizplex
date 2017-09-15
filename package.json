@@ -1,5 +1,6 @@
 {
   "name": "vizplex",
+  "descript": "Wacky noise visualizer",
   "version": "1.0.0",
   "main": "./src/index.js",
   "license": "MIT",
@@ -8,23 +9,26 @@
     "dev": "webpack-dev-server --open",
     "test": "mocha --watch --require reify test"
   },
+  "keywords": [
+    "simplex", "noise", "glsl", "visualizer", "art", "procedural", "animated"
+  ],
   "dependencies": {
     "a-big-triangle": "^1.0.3",
-    "canvas-fit": "^1.5.0",
     "ccapture.js": "^1.0.7",
     "gl-clear": "^2.0.0",
     "gl-context": "^0.1.1",
     "gl-shader": "^4.2.1",
     "glsl-noise": "^0.0.0",
     "glslify": "^6.1.0",
-    "reify": "^0.12.1",
-    "right-now": "^1.0.0"
+    "right-now": "^1.0.0",
+    "canvas-fit": "^1.5.0"
   },
   "devDependencies": {
     "buble": "^0.15.2",
     "buble-loader": "^0.4.1",
     "glslify-loader": "^1.0.2",
     "mocha": "^3.5.3",
+    "reify": "^0.12.1",
     "mocha-loader": "^1.1.1",
     "raw-loader": "^0.5.1",
     "webpack": "^3.5.5",
