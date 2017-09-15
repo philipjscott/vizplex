@@ -1,15 +1,17 @@
 export default function eqParser (eq) {
-  var regex = /([^i]?)n\(/g
+  var regex = /([^i]|^)n/g
   var matches = []
   var match
   
   while ((match = regex.exec(eq)) !== null) {
     matches.push(match.index)
   }
+  console.log('test: ' + eq)
   console.log(matches)
   matches.forEach((elem) => {
     var p = -1
-    for (var i = elem + 2; i < eq.length; i++) {
+    // index is position prior to n, so we need to skip 3 to get to content
+    for (var i = elem + 3; i < eq.length; i++) {
       if (eq[i] === ')') {
         p++
         if (p === 0) {
@@ -21,6 +23,5 @@ export default function eqParser (eq) {
       }
     }
   })
-  console.log(eq) 
-  return eq.replace(regex, '$1%NOISE%(vec3(')
+  return eq.replace(regex, '$1%NOISE%(vec3')
 }
