@@ -27,7 +27,6 @@ export default function eqParser (eq) {
            .replace(argsRegex, 'gl_FragCoord.$1')
            .replace(floatRegex, function (match, pre, num) {
              num = Number(num)
-             console.log(num, num % 1)
              return (num % 1 === 0) ? `${pre}${num}.0` : `${pre}${num}`
            })
 }

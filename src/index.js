@@ -7,6 +7,7 @@ import glContext from 'gl-context'
 import glShader from 'gl-shader'
 import now from 'right-now'
 import draw from 'a-big-triangle'
+import CCapture from 'ccapture.js'
 
 const clear = glClear({ color: [0, 1, 0, 1] })
 const fragLookup = {
@@ -17,10 +18,12 @@ const fragLookup = {
 let gl
 let shader
 let tFactor
-let time = now()
+let canvas
+let capturer
+let time = now() / 1000
 
 function animate () {
-  time = now()
+  time = now() / 1000
 }
 function render () {
   const width = gl.drawingBufferWidth
@@ -34,22 +37,28 @@ function render () {
   shader.uniforms.t = tFactor * time
   shader.attributes.position.pointer()
   draw(gl)
+  
+  if (capturer) {
+    capturer.capture(canvas)
+  }
 }
 
-export default function vizplex (target, rgb, factor) {
-  const canvas = typeof target === "string"
+export default function vizplex (target, rgb, options) {
+  options = options || {}
+  capturer = options.ccapConfig ? new CCapture(options.ccapConfig) : null
+  tFactor = options.timeFactor || 1
+  canvas = typeof target === "string"
     ? document.querySelector(target)
     : target
   let frag
 
-  gl = glContext(canvas, render)
-  tFactor = factor || 0.001
+  if (capturer) {
+    capturer.start()
+  }
 
-  // map the user input to glsl syntax and variables
+  gl = glContext(canvas, render)
   rgb = rgb.map(fnStr => eqParser(fnStr))
-  console.log(rawFrag)
   frag = rawFrag.replace(/(%R_FN%|%G_FN%|%B_FN%)/g, substr => rgb[fragLookup[substr]])
                 .replace(/%NOISE%/g, 'snoise_1_3')
-  console.log(frag)
   shader = glShader(gl, vert, frag)
 }

@@ -11,6 +11,7 @@
   "dependencies": {
     "a-big-triangle": "^1.0.3",
     "canvas-fit": "^1.5.0",
+    "ccapture.js": "^1.0.7",
     "gl-clear": "^2.0.0",
     "gl-context": "^0.1.1",
     "gl-shader": "^4.2.1",
