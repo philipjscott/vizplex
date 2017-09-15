@@ -26,12 +26,12 @@ describe('eqParser', function () {
   })
   it('should map x and y to FragCoord.x and FragCoord.y', function () {
     eqIn = 'n(1.43,x,n(x,y,y))'
-    eqOut = '%NOISE%(vec3(1.43,FragCoord.x,%NOISE%(vec3(FragCoord.x,FragCoord.y,FragCoord.y))))'
+    eqOut = '%NOISE%(vec3(1.43,gl_FragCoord.x,%NOISE%(vec3(gl_FragCoord.x,gl_FragCoord.y,gl_FragCoord.y))))'
     assert.equal(eqParser(eqIn), eqOut)
   })
   it('should be able to handle inputs with .0 appended already', function () {
     eqIn = 'n(x/32.0,y/32.0,t)'
-    eqOut = '%NOISE%(vec3(FragCoord.x/32.0,FragCoord.y/32.0,t))'
+    eqOut = '%NOISE%(vec3(gl_FragCoord.x/32.0,gl_FragCoord.y/32.0,t))'
     assert.equal(eqParser(eqIn), eqOut)
   })
 })
