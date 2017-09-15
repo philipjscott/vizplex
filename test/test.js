@@ -34,4 +34,10 @@ describe('eqParser', function () {
     eqOut = '%NOISE%(vec3(gl_FragCoord.x/32.0,gl_FragCoord.y/32.0,t))'
     assert.equal(eqParser(eqIn), eqOut)
   })
+  it('should be able to handle raw numbers and trig', function () {
+    assert.equal(eqParser('1'), '1.0')
+    assert.equal(eqParser('0.0'), '0.0')
+    assert.equal(eqParser('0'), '0.0')
+    assert.equal(eqParser('sin(3)'), 'sin(3.0)')
+  })
 })

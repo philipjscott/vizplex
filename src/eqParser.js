@@ -1,10 +1,10 @@
 export default function eqParser (eq) {
   var noiseRegex = /([^i]|^)n/g
-  var floatRegex = /([^c])([-]?\d+(\.\d+)?)/g
   var argsRegex = /(x|y)/g
+  var floatRegex = /([^c]|^)([-]?\d+(\.\d+)?)/g
   var matches = []
   var match
-  
+
   while ((match = noiseRegex.exec(eq)) !== null) {
     matches.push(match.index)
   }
@@ -27,6 +27,7 @@ export default function eqParser (eq) {
            .replace(argsRegex, 'gl_FragCoord.$1')
            .replace(floatRegex, function (match, pre, num) {
              num = Number(num)
+             console.log(num, num % 1)
              return (num % 1 === 0) ? `${pre}${num}.0` : `${pre}${num}`
            })
 }
