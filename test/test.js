@@ -24,4 +24,14 @@ describe('eqParser', function () {
     eqOut = '%NOISE%(vec3(1.1,2.0,%NOISE%(vec3(3.14,52.1432,0.0))))'
     assert.equal(eqParser(eqIn), eqOut)
   })
+  it('should map x and y to FragCoord.x and FragCoord.y', function () {
+    eqIn = 'n(1.43,x,n(x,y,y))'
+    eqOut = '%NOISE%(vec3(1.43,FragCoord.x,%NOISE%(vec3(FragCoord.x,FragCoord.y,FragCoord.y))))'
+    assert.equal(eqParser(eqIn), eqOut)
+  })
+  it('should be able to handle inputs with .0 appended already', function () {
+    eqIn = 'n(x/32.0,y/32.0,t)'
+    eqOut = '%NOISE%(vec3(FragCoord.x/32.0,FragCoord.y/32.0,t))'
+    assert.equal(eqParser(eqIn), eqOut)
+  })
 })

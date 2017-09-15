@@ -1,6 +1,7 @@
 export default function eqParser (eq) {
   var noiseRegex = /([^i]|^)n/g
-  var floatRegex = /([^c\.]\d+)(?!\.)/g
+  var floatRegex = /([^c])([-]?\d+(\.\d+)?)/g
+  var argsRegex = /(x|y)/g
   var matches = []
   var match
   
@@ -23,5 +24,9 @@ export default function eqParser (eq) {
     }
   })
   return eq.replace(noiseRegex, '$1%NOISE%(vec3')
-           .replace(floatRegex, '$1.0')
+           .replace(argsRegex, 'gl_FragCoord.$1')
+           .replace(floatRegex, function (match, pre, num) {
+             num = Number(num)
+             return (num % 1 === 0) ? `${pre}${num}.0` : `${pre}${num}`
+           })
 }

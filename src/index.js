@@ -1,7 +1,7 @@
 import vert from './vert.glsl'
 import rawFrag from './frag.glsl'
+import eqParser from './eqParser'
 
-import XRegExp from 'xregexp'
 import glClear from 'gl-clear'
 import glContext from 'gl-context'
 import glShader from 'gl-shader'
@@ -46,14 +46,10 @@ export default function vizplex (target, rgb, factor) {
   tFactor = factor || 0.001
 
   // map the user input to glsl syntax and variables
-  rgb = rgb.map(fn => fn.replace(/(x|y)/g, 'gl_FragCoord.$1')
-                        .replace('n', '%NOISE%'))
+  rgb = rgb.map(fnStr => eqParser(fnStr))
   console.log(rawFrag)
-
-  // do a funky regex that maps n() to snoise_1_3()
   frag = rawFrag.replace(/(%R_FN%|%G_FN%|%B_FN%)/g, substr => rgb[fragLookup[substr]])
                 .replace(/%NOISE%/g, 'snoise_1_3')
   console.log(frag)
-
   shader = glShader(gl, vert, frag)
 }
