@@ -4,17 +4,17 @@
     <title>Example 1</title>
   </head>
   <body>
-    <canvas id="mycanvas" height="512" width="512"></canvas>
+    <canvas id="mycanvas" height="256" width="256"></canvas>
   </body>
   <script src="https://scottyfillups.github.io/vizplex/vizplex.js"></script>
   <script>
-    var canvas = document.querySelector('mycanvas')
+    var canvas = document.querySelector('#mycanvas')
     var config = {
-      timeFactor: 0.1,
+      timeFactor: 2,
       ccapConfig: {
         framerate: 30,
         verbose: true,
-        format: 'webm'
+        format: 'webm',
         timeLimit: 10
       }
     }

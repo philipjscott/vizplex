@@ -11,7 +11,9 @@ Fullscreen (yes! fullscreen!) demonstrations [here](https://scottyfillups.github
 ### Installation
 
 The package is on NPM:
+
 `$ npm install --save vizplex`
+
 
 Alternatively, you can embed everything in `<script>` tags:
 ```html
@@ -31,7 +33,7 @@ document.body.appendChild(canvas)
 vizplex(canvas, eqs)
 ```
 
-The [demo](https//scottyfillups.github.io/vizplex) page should have links to more examples. All the examples are in the `docs/examples` folder.
+All the examples are in the `docs/examples` folder in the [git repo](https://github.com/ScottyFillups/vizplex).
 
 ### Documentation
 

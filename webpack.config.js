@@ -3,12 +3,13 @@ var path = require('path')
 module.exports = {
   entry: {
     bundle: './docs/demo.js',
-    vizplex: './src/vizplex.js',
-    test: './test/test.js'
+    vizplex: './src/vizplex.js'
   },
   output: {
     filename: '[name].js',
-    path: path.join(__dirname, './docs')
+    path: path.join(__dirname, './docs'),
+    library: 'vizplex',
+    libraryTarget: 'window'
   },
   devtool: 'inline-source-map',
   devServer: {
