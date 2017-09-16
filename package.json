@@ -1,7 +1,7 @@
 {
   "name": "vizplex",
   "descript": "Wacky noise visualizer and generative art library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "./src/index.js",
   "license": "MIT",
   "scripts": {

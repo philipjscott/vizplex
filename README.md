@@ -1,12 +1,12 @@
 # vizplex
 
-![](https://scottyfillups.github.io/vizplex/screenshots/noise1.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise2.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise3.gif)
-<br />
-![](https://scottyfillups.github.io/vizplex/screenshots/noise4.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise5.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise6.gif)
-
 Noise visualizer and generative art library.
 
 Fullscreen (yes! fullscreen!) demonstrations [here](https://scottyfillups.github.io/vizplex)
+
+![](https://scottyfillups.github.io/vizplex/screenshots/noise1.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise2.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise3.gif)
+<br />
+![](https://scottyfillups.github.io/vizplex/screenshots/noise4.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise5.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise6.gif)
 
 ### Installation
 
