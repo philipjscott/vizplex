@@ -1,8 +1,16 @@
 # vizplex
 
+<img src="https://scottyfillups.github.io/vizplex/screenshots/noise1.gif" />
+<img src="https://scottyfillups.github.io/vizplex/screenshots/noise2.gif" />
+<img src="https://scottyfillups.github.io/vizplex/screenshots/noise3.gif" />
+<br />
+<img src="https://scottyfillups.github.io/vizplex/screenshots/noise4.gif" />
+<img src="https://scottyfillups.github.io/vizplex/screenshots/noise5.gif" />
+<img src="https://scottyfillups.github.io/vizplex/screenshots/noise6.gif" />
+
 Wacky noise visualization library.
 
-Demonstration [here](https://scottyfillups.github.io/vizplex)
+Fullscreen (yes! fullscreen!) demonstrations [here](https://scottyfillups.github.io/vizplex)
 
 ### Installation
 
@@ -36,7 +44,7 @@ The [demo](https//scottyfillups.github.io/vizplex) page should have links to mor
 * **fns**: An array for the respective functions for RGBA. More detailed explanation below
 * **options**:
   * timeFactor: Numeric value that multiplies the time variable. Used to controlling speed
-  * ccapConfig: The config object used to instantiate [CCapture](https://github.com/spite/ccapture.js/). Used for recording the contents of the canvas.
+  * ccapConfig: The config object used to instantiate [CCapture](https://github.com/spite/ccapture.js/). Used for recording the contents of the canvas. **Webms do NOT support transparency**, this means your `alpha` function must be `1`
 
 ### RGBA functions
 

@@ -3,7 +3,7 @@ var path = require('path')
 module.exports = {
   entry: {
     bundle: './docs/demo.js',
-    vizplex: './src/index.js',
+    vizplex: './src/vizplex.js',
     test: './test/test.js'
   },
   output: {

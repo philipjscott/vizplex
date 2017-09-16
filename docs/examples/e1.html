@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Example 1</title>
+  </head>
+  <body>
+    <canvas id="mycanvas" height="512" width="512"></canvas>
+  </body>
+  <script src="https://scottyfillups.github.io/vizplex/vizplex.js"></script>
+  <script>
+    var canvas = document.querySelector('mycanvas')
+    var config = { timeFactor: 0.1 }
+    vizplex(canvas, ['sin(1/n(x/32,y/32,t))', 'r', 'r', 'sin(x/32'], config)
+  </script>
+</html>

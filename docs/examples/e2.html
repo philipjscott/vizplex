@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Example 1</title>
+  </head>
+  <body>
+    <canvas id="mycanvas" height="512" width="512"></canvas>
+  </body>
+  <script src="https://scottyfillups.github.io/vizplex/vizplex.js"></script>
+  <script>
+    var canvas = document.querySelector('mycanvas')
+    var config = {
+      timeFactor: 0.1,
+      ccapConfig: {
+        framerate: 30,
+        verbose: true,
+        format: 'webm'
+        timeLimit: 10
+      }
+    }
+    // the alpha function MUST be 1 if you want to record
+    vizplex(canvas, ['abs(n(x/32,y/32,t))', 'r', 'r', '1'], config)
+  </script>
+</html>

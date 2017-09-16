@@ -5,6 +5,7 @@ import eqParser from './eqParser'
 import glClear from 'gl-clear'
 import glContext from 'gl-context'
 import glShader from 'gl-shader'
+import glReset from 'gl-reset'
 import now from 'right-now'
 import draw from 'a-big-triangle'
 import CCapture from 'ccapture.js'
@@ -21,6 +22,7 @@ let shader
 let tFactor
 let canvas
 let capturer
+let reset
 let time = now() / 1000
 
 function animate () {
@@ -56,8 +58,12 @@ export default function vizplex (target, rgba, options) {
   if (capturer) {
     capturer.start()
   }
+  if (gl) {
+    reset()
+  }
 
   gl = glContext(canvas, render)
+  reset = glReset(gl)
   rgba = rgba.map(fnStr => eqParser(fnStr))
   frag = rawFrag.replace(/(%R_FN%|%G_FN%|%B_FN%|%A_FN%)/g, substr => rgba[fragLookup[substr]])
                 .replace(/%NOISE%/g, 'snoise_1_3')

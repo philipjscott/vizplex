@@ -3,3 +3,4 @@ ideas.txt
 *.swo
 *.swp
 .reify-cache
+*.db

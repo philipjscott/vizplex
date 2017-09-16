@@ -1548,6 +1548,10 @@ gl-format-compiler-error@^1.0.2:
     glsl-shader-name "^1.0.0"
     sprintf-js "^1.0.3"
 
+gl-reset@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gl-reset/-/gl-reset-1.0.0.tgz#b321d22abf729fc510ceb829b749e1d4d6502809"
+
 gl-shader@^4.2.1:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/gl-shader/-/gl-shader-4.2.1.tgz#bc9b808e9293c51b668e88de615b0c113708dc2f"
