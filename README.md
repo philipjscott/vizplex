@@ -8,7 +8,7 @@
 <img src="https://scottyfillups.github.io/vizplex/screenshots/noise5.gif" />
 <img src="https://scottyfillups.github.io/vizplex/screenshots/noise6.gif" />
 
-Wacky noise visualization library.
+Noise visualizer and generative art library.
 
 Fullscreen (yes! fullscreen!) demonstrations [here](https://scottyfillups.github.io/vizplex)
 

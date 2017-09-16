@@ -1,17 +1,23 @@
 <!doctype html>
 <html>
   <head>
-    <title>Vizplex</title>
+    <title>vizplex</title>
     <meta name="viewport" content="width=device-width" />
+    <link rel="shortcut icon" href="./images/noise0.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <main id="menu">
       <h1>vizplex</h1>
-      <img id="noise0" src="./images/noise0.png" />
-      <img id="noise1" src="./images/noise1.png" />
-      <img id="noise2" src="./images/noise2.png" />
-      <img id="noise3" src="./images/noise3.png" />
+      <a id="repo-link" href="https://github.com/ScottyFillups/vizplex">
+        <span class="icon-github"></span>
+      </a>
+      <div class="img-container">
+        <img id="noise0" src="./images/noise0.png" />
+        <img id="noise1" src="./images/noise1.png" />
+        <img id="noise2" src="./images/noise2.png" />
+        <img id="noise3" src="./images/noise3.png" />
+      </div>
       <div id="noise-form">
         <input id="r" type="text" placeholder="R" value="n(x/32,y/32,t)" /><br />
         <input id="g" type="text" placeholder="G" value="r" /><br />
@@ -19,6 +25,7 @@
         <input id="a" type="text" placeholder="A" value="0.5" /><br />
         <button type="button" id="gen-button">generate</button>
       </div>
+      <span id="menu-toggle" class="icon-keyboard_arrow_down"></span>
     </main>
   </body>
   <script src="bundle.js"></script>

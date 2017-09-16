@@ -1,10 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?r0sf0s');
+  src:  url('fonts/icomoon.eot?r0sf0s#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?r0sf0s') format('truetype'),
+    url('fonts/icomoon.woff?r0sf0s') format('woff'),
+    url('fonts/icomoon.svg?r0sf0s#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-keyboard_arrow_down:before {
+  content: "\e900";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+
+
 
 h1 {
   margin-bottom: 15px;
+  margin-top: 15px;
 }
 img {
   cursor: pointer;
+}
+.img-container {
+  margin-bottom: 10px;
 }
 #menu {
   color: #fff;
@@ -13,11 +51,13 @@ img {
   top: 0;
   left: 0;
   right: 0;
+  height: 390px;
   text-align: center;
   background-color: #222;
   background-color: rgba(15,15,15,0.9);
   padding-bottom: 20px;
   z-index: -1;
+  transition: 1.5s transform ease;
 }
 canvas {
   z-index: -2;
@@ -29,19 +69,42 @@ input[type="text"] {
   font-size: 1.1em;
   text-align: center;
   color: #fff;
-  cursor: pointer;
   border: 0;
   padding: 4px;
   border-bottom: 1px solid #eee;
+  width: 150px;
 }
 button {
   background-image: none;
   background-color: transparent;
   padding: 5px 15px;
-  margin-top: 15px;
+  margin: 20px 0 5px 0;
   font-family: 'Roboto', sans-serif;
   font-size: 1em;
   border: 1px solid #fff;
   color: #fff;
   text-transform: uppercase;
+  cursor: pointer;
+}
+#menu-toggle {
+  font-size: 2.5em;
+  display: inline-block;
+  cursor: pointer;
+  transform: rotate(180deg);
+  transition: 0.5s transform ease;
+ 
+  -webkit-touch-callout: none;
+  user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+#repo-link {
+  font-size: 2.5em;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+#repo-link, #repo-link:active, #repo-link:hover, #repo-link:visited, #repo-link:link {
+  color: #fff;
+  text-decoration: none;
 }

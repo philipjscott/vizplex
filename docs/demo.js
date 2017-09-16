@@ -9,7 +9,7 @@ const defFns = [
     '1'
   ],
   [
-    'sin(sin(x/y*t)*n(x/256,y/256,t))',
+    'sin(sin(x/y*t)*n(x/256,y/256,t*5))',
     'abs(n(x/512,y/512,t))',
     '1',
     '0.5'
@@ -44,10 +44,17 @@ $('#gen-button').addEventListener('click', function () {
   console.log(fns)
   vizplex(canvas, fns, config)
 })
-
-
 window.addEventListener('resize', fit(canvas), false)
 
+
+const toggleElem = $('#menu-toggle')
+const menuElem = $('#menu')
+let menuDisplayed = true
+toggleElem.addEventListener('click', function () {
+  menuElem.style.transform = menuDisplayed ? 'translate(0px, -367px)' : 'translate(0px, 0px)'
+  toggleElem.style.transform = menuDisplayed ? 'rotate(0deg)' : 'rotate(180deg)'
+  menuDisplayed = !menuDisplayed
+})
 
 function $ (selector) {
   return document.querySelector(selector)
