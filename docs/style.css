@@ -73,6 +73,7 @@ input[type="text"] {
   padding: 4px;
   border-bottom: 1px solid #eee;
   width: 150px;
+  outline: none;
 }
 button {
   background-image: none;
@@ -85,6 +86,7 @@ button {
   color: #fff;
   text-transform: uppercase;
   cursor: pointer;
+  outline: none;
 }
 #menu-toggle {
   font-size: 2.5em;
@@ -107,4 +109,20 @@ button {
 #repo-link, #repo-link:active, #repo-link:hover, #repo-link:visited, #repo-link:link {
   color: #fff;
   text-decoration: none;
+}
+#r { 
+  color: #d12f17;
+  border-color: #d12f17;
+}
+#g {
+  color: #13b534;
+  border-color: #13b534;
+}
+#b {
+  color: #117ab2;
+  border-color: #117ab2;
+}
+#a {
+  color: rgba(255,255,255,0.3);
+  border-color: rgba(255,255,255,0.3);
 }
