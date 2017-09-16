@@ -1,12 +1,8 @@
 # vizplex
 
-<img src="https://scottyfillups.github.io/vizplex/screenshots/noise1.gif" />
-<img src="https://scottyfillups.github.io/vizplex/screenshots/noise2.gif" />
-<img src="https://scottyfillups.github.io/vizplex/screenshots/noise3.gif" />
+![](https://scottyfillups.github.io/vizplex/screenshots/noise1.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise2.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise3.gif)
 <br />
-<img src="https://scottyfillups.github.io/vizplex/screenshots/noise4.gif" />
-<img src="https://scottyfillups.github.io/vizplex/screenshots/noise5.gif" />
-<img src="https://scottyfillups.github.io/vizplex/screenshots/noise6.gif" />
+![](https://scottyfillups.github.io/vizplex/screenshots/noise4.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise5.gif)![](https://scottyfillups.github.io/vizplex/screenshots/noise6.gif)
 
 Noise visualizer and generative art library.
 
