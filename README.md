@@ -1,6 +1,6 @@
 # vizplex
 
-Noise visualizer and generative art library.
+GLSL noise visualizer library.
 
 Fullscreen (yes! fullscreen!) demonstrations [here](https://scottyfillups.github.io/vizplex)
 

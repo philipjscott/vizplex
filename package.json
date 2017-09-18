@@ -1,7 +1,7 @@
 {
   "name": "vizplex",
-  "descript": "Wacky noise visualizer and generative art library",
-  "version": "1.0.2",
+  "descript": "GLSL noise visualizer library",
+  "version": "1.0.3",
   "main": "./src/index.js",
   "license": "MIT",
   "scripts": {
@@ -18,7 +18,6 @@
     "visualizations",
     "generative",
     "generative-art",
-    "glsl",
     "art",
     "procedural",
     "animated"
@@ -33,15 +32,15 @@
     "gl-shader": "^4.2.1",
     "glsl-noise": "^0.0.0",
     "glslify": "^6.1.0",
+    "raw-loader": "^0.5.1",
+    "glslify-loader": "^1.0.2",
     "right-now": "^1.0.0"
   },
   "devDependencies": {
     "buble": "^0.15.2",
     "buble-loader": "^0.4.1",
-    "glslify-loader": "^1.0.2",
     "mocha": "^3.5.3",
     "mocha-loader": "^1.1.1",
-    "raw-loader": "^0.5.1",
     "reify": "^0.12.1",
     "webpack": "^3.5.5",
     "webpack-dev-server": "^2.7.1"
