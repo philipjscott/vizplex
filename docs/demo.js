@@ -1,4 +1,4 @@
-import vizplex from '../src/index'
+import vizplex from '../dist/vizplex.min.js'
 import fit from 'canvas-fit'
 
 const defFns = [

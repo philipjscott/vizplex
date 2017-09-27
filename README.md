@@ -15,9 +15,9 @@ The package is on NPM:
 `$ npm install --save vizplex`
 
 
-Alternatively, you can embed everything in `<script>` tags:
+Alternatively, you can download the file from the [GitHub repo](https://github.com/ScottyFillups/vizplex") and embed everything in `<script>` tags:
 ```html
-<script src="https://scottyfillups.github.io/vizplex/vizplex.js"></script>
+<script src="./vizplex.min.js"></script>
 ```
 
 ### Usage
@@ -33,7 +33,7 @@ document.body.appendChild(canvas)
 vizplex(canvas, eqs)
 ```
 
-All the examples are in the `docs/examples` folder in the [git repo](https://github.com/ScottyFillups/vizplex).
+All the examples are in the `docs/examples` folder in the [GitHub repo](https://github.com/ScottyFillups/vizplex).
 
 ### Documentation
 
