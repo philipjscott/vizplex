@@ -1,5 +1,5 @@
 import assert from 'assert'
-import eqParser from '../src/eqParser'
+import eqParser from '../src/eq-parser'
 
 describe('eqParser', function () {
   var eqIn

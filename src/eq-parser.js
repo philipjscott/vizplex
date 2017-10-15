@@ -1,7 +1,7 @@
 export default function eqParser (eq) {
-  var noiseRegex = /([^i]|^)n/g
-  var argsRegex = /(x|y)/g
-  var floatRegex = /([^c]|^)([-]?\d+(\.\d+)?)/g
+  var noiseRegex = /([^i]|^)n/g   // match all ns, except ns in sin
+  var argsRegex = /(x|y)/g        // match all x/y
+  var floatRegex = /([^c]|^)([-]?\d+(\.\d+)?)/g    // match all integers, except 3 in vec3
   var matches = []
   var match
 
